@@ -1,0 +1,36 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+    double x1, x2, a, b, c;
+    cout<<"Hola, escribe los valores para la ecuacion: ax2 + bx + c";
+    cout<<"\n";
+    cout<<"Cuanto vale a?";
+    cout<<"\n";
+    cin>>a;
+    cout<<"Cuanto vale b?";
+    cout<<"\n";
+    cin>>b;
+    cout<<"Cuanto vale c?";
+    cout<<"\n";
+    cin>>c;
+    x1 = (-b+sqrt(b*b-4*a*c))/2*a;
+    x2 = (-b+sqrt(b*b-4*a*c))/2*a;
+    cout<<x1;
+    cout<<"\n";
+    cout<<x2;
+
+    
+    return 0;
+}
