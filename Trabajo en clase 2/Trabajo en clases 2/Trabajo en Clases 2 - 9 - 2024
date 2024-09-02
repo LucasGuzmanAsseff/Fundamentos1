@@ -1,0 +1,81 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    //Declarar Variables
+    int opc, r, n, contador=1, sumatoria=1;
+    float salario, salariobruto, horas, salariototal, impuestos;  
+    string nombre;
+    
+    
+    do {
+        cout << "MENU"<<endl;
+        cout << "===="<<endl;
+        cout << "1. Area y longitud de la circunferencia"<<endl;
+        cout << "2. Salario con impuestos"<<endl;
+        cout << "3. Multiplicacion de serie de numeros naturales"<<endl;
+        cout << "0. Salir"<<endl;
+        cout << "Ingrese la opcion que desea: ";
+        
+        //Se pide una de las opciones
+        cin >> opc;
+        
+        //Se realizan instrucciones depende de la Variable
+        switch (opc) {
+            
+            //colocar las instrucciones que correspondan a la primera opcion
+            case 1: 
+                  cout << "Ingrese el radio" <<endl; 
+                  cin>>r;
+                  cout<<"El area de la circunferencia es: "<<r*r*3.1416<<endl;
+                  cout<<"La longitud es: "<<2*3.1416*r<<endl;
+                  break;
+                  
+            case 2:
+                  cout<<"Ingrese su nombre ";
+                  cin>>nombre;
+                  cout<<"Ingresa tu salario por hora trabajada ";
+                  cin>>salario;
+                  cout<<"Ingrese la cantidad de horas trabajadas en el mes ";
+                  cin>>horas;
+                  salariobruto = salario*horas;
+                  if (salariobruto<8272) {
+                     cout<<"Hola "<<nombre<<"\n";
+                     cout<<"Tu salario de este mes es de "<<salariobruto<<" Bs.";
+                    }
+                  else {
+                     impuestos = (salariobruto/100.0)*13.0;
+                     salariototal = salariobruto - impuestos;
+                     cout<<"Hola "<<nombre<<"\n";
+                     cout<<"Tu salario luego de impuestos de IVA es de "<<salariototal<<" Bs."<<endl;
+                    }
+                  break;
+                  
+            case 3: 
+                 //Calcular la siguiente suma S= 1 - 2 + 3 - 4 + 5 - .........+/- N.
+                 cout << "Ingresa el numero (natural) hasta el cual se va a multiplicar: " <<endl;
+                 cin >> n;
+                 if (0>n) {
+                     cout<<"Numero invalido"<<endl;
+                    }
+                 else {
+                     while (contador<=n) {
+                         sumatoria=sumatoria*contador;
+                         contador=contador+1;
+                        }
+                        cout<<"La Multiplicacion nos da: "<<sumatoria<<endl;
+                    }
+                 
+                 break;
+                 
+            case 0: cout << "Salir" <<endl;
+                    break;
+                    
+            default: cout<<"Opcion invalida" <<endl;
+            
+        }
+    } while (opc !=0);
+    return 0;
+}
