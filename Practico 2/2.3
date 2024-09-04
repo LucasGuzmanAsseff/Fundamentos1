@@ -1,0 +1,25 @@
+//Suma de los cuadrados de los primeros N números enteros.
+//S=1^2+2^2+3^2+⋯…………+N^2
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    
+    int a=0, c=0, n;
+    
+    cout<<"Ingresar el numero hasta el cual se van a sumar los cuadrados: ";
+    cin>>n;
+    
+    while (c<=n) {
+        
+        a = c*c + a;
+        c = c + 1;
+        
+    }
+    
+    cout<<"La sumatoria de los cuadrados es igual a "<<a;
+    
+    return 0;
+}
