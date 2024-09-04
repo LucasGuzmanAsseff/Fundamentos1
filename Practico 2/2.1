@@ -1,0 +1,26 @@
+//Suma de los números enteros comprendidos entre 1 y N.
+//S=1+2+3+⋯…………+N 
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    
+    int c = 0, n, i = 1;
+    cout<<"Ingrese el numero hasta el cual se va a sumar los numeros enteros: ";
+    cin>>n;
+    
+    //Ingreso mi palabra reservada while
+    
+    while (i<=n) {
+        c = c + i;
+        i = i + 1;
+    }
+    
+    cout<<"La sumatoria de los numeros impares sera igual a "<<c;
+    
+    
+    
+    return 0;
+}
