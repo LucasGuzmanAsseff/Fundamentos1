@@ -1,0 +1,31 @@
+//Calcular la siguiente suma
+//S= 1 - 2 + 3 - 4 + 5 - .........+/- N.
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    
+    int n, ci=1, cp=0, ai=0, ap=0;
+    
+    cout<<"Ingrese el numero hasta el cual llegara la sumatoria: "<<endl;
+    cin>>n;
+
+    while (ci <= n) {
+        ai = ai + ci;
+        ci=ci+2;
+    }
+    
+    while (cp <= n) {
+        ap = ap + cp;
+        cp = cp +2;
+    }
+    
+    cout<<"La sumatoria es igual a "<<ai-ap;
+    
+    
+    
+    
+    return 0;
+}
