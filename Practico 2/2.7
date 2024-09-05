@@ -1,0 +1,27 @@
+//Calcular el factorial de un número entero N. Donde se define como factorial de la siguiente forma: 
+//FAC(N) = 1x2x3x.....xN; donde el factorial de cero es uno  (FAC(0) =1).  FAC(N)=N!, se lee factorial (!) de N.
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    int c=1, i=1, n;
+    cout<<"FACTORIAL DE UN NUMERO"<<endl;
+    cout<<"Ingrese el numero"<<endl;
+    cin>>n;
+    if (n==0){
+        cout<<"El factorial es igual a: 1"; 
+    }
+    else {
+        if (n<0) {
+            cout<<"Ingrese un valor valido";
+        }
+        else {
+            while (i <= n) {
+                c = i * c;
+                i = i + 1;
+            }
+        } cout<<"El factorial es igual a: "<<c;
+    }   
+}
