@@ -1,0 +1,21 @@
+//Una empresa de catering cobra 50Bs por persona para un evento; realizar un programa en funcion al precio y cantidad de personas
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int p, c, v;
+    
+    cout<<"EVENTOS"<<endl;
+    cout<<"Ingrese la cantidad de personas ";
+    cin>>p;
+    cout<<"\nIngrese el costo por persona ";
+    cin>>c;
+    
+    v = p * c;
+    
+    cout<<"\nSu evento tendra un costo total de: "<<v<<"Bs.";
+
+    return 0;
+}
