@@ -1,0 +1,35 @@
+//Ejercicio 2
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float a, s, i, t;
+    
+    cout<<"Ingrese su antiguedad en años"<<endl;
+    cin>>a; 
+    cout<<"Ingrese su salario"<<endl;
+    cin>>s;
+    if (a>3){
+        if (s>5000.0) {
+            i=3.0/100.0;
+        }
+        else {
+            i=2.0/100.0;
+        }
+    }
+    else {
+        if (s>5000.0) {
+            i=2.5/100.0;
+        }
+        else {
+            i=1.5/100.0;
+        }
+    }
+    
+    t=(i*s)+s;
+    cout<<"Su saldo màs intereses es de: "<<t<<"Bs.";
+
+    return 0;
+}
