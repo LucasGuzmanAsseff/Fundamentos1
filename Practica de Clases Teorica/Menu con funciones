@@ -1,0 +1,73 @@
+#include <iostream>
+using namespace std;
+
+float areacuadrado (float l) { 
+    return l*l;
+}
+float areatriangulo (float b, float h) {
+    return (b*h)/2;
+}
+float areaparalelogramo (float b, float h) {
+    return b*h;
+}
+float areaciruclo (float r) {
+    return r*r*3.1416;
+}
+int main()
+{
+    int opcion;
+    float l, b, h, r;
+
+
+    do {
+        cout << "MENU" <<endl ;
+        cout<< "===" <<endl;
+        cout<< "1. Area del cuadrado "<< endl;
+        cout<< "2. Area del triangulo "<< endl;
+        cout<< "3. Area del circulo "<< endl;
+        cout<< "4. Area del paralelogramo"<<endl;
+        cout<< "0. Salir"<< endl;
+        cout<< "ingrese la opcion que desea : " ;
+        cin>> opcion;
+        switch (opcion){
+            case 1:
+                {
+                 cout<<"Ingrese el lado del cuadrado"<<endl;
+                 cin>>l;
+                 cout<<"El area es "<<areacuadrado(l)<<endl;
+                 break;
+                }
+            case 2 :
+                {
+                 cout<<"Ingrese la base del triangulo"<<endl;
+                 cin>>b;
+                 cout<<"Ingrese la altura del triangulo"<<endl;
+                 cin>>h;
+                 cout<<"El area es "<<areatriangulo(b,h)<<endl;
+                 break;
+                }
+            case 3 :
+                {
+                 cout<<"Ingrese el radio del circulo"<<endl;
+                 cin>>r;
+                 cout<<"El area es "<<areaciruclo(r)<<endl;
+                 break;
+                }  
+            case 4 :
+                {
+                 cout<<"Ingrese la base del paralelogramo"<<endl;
+                 cin>>b;
+                 cout<<"Ingrese la altura del paralelogramo"<<endl;
+                 cin>>h;
+                 cout<<"El area es "<<areaparalelogramo(b,h)<<endl;
+                 break;
+                }  
+            case 0  : cout << "salir" << endl;
+                 break;
+            default : cout << " opcion invalida"<< endl;
+            
+        }
+    } while (opcion !=0) ;
+   
+    return 0;
+}
