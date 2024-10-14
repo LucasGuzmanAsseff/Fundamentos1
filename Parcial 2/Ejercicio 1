@@ -1,0 +1,24 @@
+//Calcular la siguiente suma S = 1 - 2 + 3 - 4 ... +/- n
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	int n, sp = 0, sn = 0;
+
+	cout << "Ingrese un numero natural hasta donde realizar la sumatoria: ";
+	cin >> n;
+
+	for (int i=1; i<=n; i += 2){
+		sp += i;
+	}
+	
+	for (int j=0; j<=n; j += 2){
+		sn += j;
+	}
+	
+	cout << "\n El resultado es " << sp - sn;
+
+	return 0;
+}
